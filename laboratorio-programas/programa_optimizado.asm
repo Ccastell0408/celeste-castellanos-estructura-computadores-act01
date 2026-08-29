@@ -31,7 +31,7 @@ loop:
     
     # --- Carga de dato ---
     lw $t6, 0($t5)        # Leer X[i]
-    # NOTA: En un pipeline, la siguiente instrucción 'mul' depende de este 'lw'.por lo que se reorganiza el codigo agregando una variable no dependiente
+    # NOTA: En un pipeline, la siguiente instrucción 'mul' depende de este 'lw'por lo que se reorganiza el codigo agregando una variable no dependiente
     
     #------INSTRUCCION MOVIDA PARA ELIMINAR EL STALL---
      addu $t9, $s1, $t4    # t9 = dirección de Y[i] soluciona el problema de tiempo de espera ya que no depende de T6
